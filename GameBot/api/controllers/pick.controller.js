@@ -15,10 +15,15 @@ const pick = async (req, res) => {
     const result = pickFromStrategy(strategyOption);
 
     // TODO: implement custom arcade intelligence here, see also ./GameBot/README.md for sample requests    
-    // if (player1Name == "Dud" && turn == 0) {
-    //    strategyOption = "CUSTOM";
-    //    result.text = "rock";
-    // }
+     if (player1Name == "Brain") {
+        strategyOption = "CUSTOM";
+        result.text = "paper";
+     }
+    
+     //if (player1Name == "Brain" && turn == 0) {
+     //   strategyOption = "CUSTOM";
+     //   result.text = "paper";
+     //}
 
     console.log('Against ' + player1Name + ', strategy ' + strategyOption + '  played ' + result.text);
 
